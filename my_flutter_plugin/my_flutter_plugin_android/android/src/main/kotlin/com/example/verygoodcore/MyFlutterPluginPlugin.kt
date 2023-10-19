@@ -21,9 +21,26 @@ class MyFlutterPluginPlugin : FlutterPlugin, MethodCallHandler {
 
     override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
         if (call.method == "getPlatformName") {
-            result.success("Android")            
+            val fibonacciSeries = generateFibonacciSeries(40)
+            result.success(fibonacciSeries.toString())
         } else {
             result.notImplemented()
+        }
+    }
+
+    fun generateFibonacciSeries(terms: Int): List<Int> {
+        val fibonacciSeries = mutableListOf<Int>()
+        for (i in 0 until terms) {
+            fibonacciSeries.add(fibonacci(i))
+        }
+        return fibonacciSeries
+    }
+
+    fun fibonacci(n: Int): Int {
+        return if (n <= 1) {
+            n
+        } else {
+            fibonacci(n - 1) + fibonacci(n - 2)
         }
     }
 

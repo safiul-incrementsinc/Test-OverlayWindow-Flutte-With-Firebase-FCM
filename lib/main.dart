@@ -44,6 +44,12 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  int fib(int n) {
+    if (n < 2) {  //base case
+      return n;
+    }
+    return fib(n - 2) + fib(n - 1);  //recursive case
+  }
   String _platformVersion = 'Unknown';
   bool _isShowingWindow = false;
   bool _isUpdatedWindow = false;
@@ -123,11 +129,22 @@ class _MyAppState extends State<MyApp> {
         body: Center(
           child: Column(
             children: <Widget>[
+              CircularProgressIndicator(),
+              IconButton(onPressed: () async {
+
+                /// dart
+               /* final f = fib(40);
+                print(f);*/
+
+                /// kotlin
+                final result = await getPlatformName();
+                print(result);
+              }, icon: Icon(Icons.add)),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 8.0),
                 child: MaterialButton(
                   onPressed: () async {
-                    const chanel =  MethodChannel('custom_channel_for_me');
+                    const chanel = MethodChannel('custom_channel_for_me');
                     final ff = await chanel.invokeMethod('printSomething');
 
                     gg();

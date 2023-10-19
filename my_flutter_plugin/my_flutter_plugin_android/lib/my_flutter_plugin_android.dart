@@ -15,6 +15,8 @@ class MyFlutterPluginAndroid extends MyFlutterPluginPlatform {
 
   @override
   Future<String?> getPlatformName() {
+
     return methodChannel.invokeMethod<String>('getPlatformName');
   }
+
 }

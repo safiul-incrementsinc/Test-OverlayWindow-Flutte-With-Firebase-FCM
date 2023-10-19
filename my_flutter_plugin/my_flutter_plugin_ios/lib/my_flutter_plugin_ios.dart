@@ -17,4 +17,9 @@ class MyFlutterPluginIOS extends MyFlutterPluginPlatform {
   Future<String?> getPlatformName() {
     return methodChannel.invokeMethod<String>('getPlatformName');
   }
+
+  @override
+  Future<String?> multiTradingTest() {
+    return methodChannel.invokeMethod<String>('test');
+  }
 }
