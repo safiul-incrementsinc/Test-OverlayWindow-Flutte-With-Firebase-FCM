@@ -18,9 +18,7 @@ Future<void> firebaseMessagingBackgroundHandler(RemoteMessage message) async {
           textColor: Colors.black87),
       decoration: SystemWindowDecoration(startColor: Colors.grey[100]),
       button: SystemWindowButton(
-        decoration: SystemWindowDecoration(
-          startColor: Colors.red
-        ),
+          decoration: SystemWindowDecoration(startColor: Colors.red),
           text: SystemWindowText(
               text: "Spam", fontSize: 10, textColor: Colors.black45),
           tag: "spam_btn"),
@@ -52,9 +50,7 @@ Future<void> firebaseMessagingBackgroundHandler(RemoteMessage message) async {
         columns: [
           EachColumn(
             text: SystemWindowText(
-                text: "Description",
-                fontSize: 10,
-                textColor: Colors.black45),
+                text: "Description", fontSize: 10, textColor: Colors.black45),
           ),
         ],
         gravity: ContentGravity.LEFT,
@@ -82,7 +78,7 @@ Future<void> firebaseMessagingBackgroundHandler(RemoteMessage message) async {
               text: "Simple button", fontSize: 12, textColor: Colors.blue),
           tag: "simple_button",
           padding:
-          SystemWindowPadding(left: 10, right: 10, bottom: 10, top: 10),
+              SystemWindowPadding(left: 10, right: 10, bottom: 10, top: 10),
           width: 0,
           height: SystemWindowButton.WRAP_CONTENT,
           decoration: SystemWindowDecoration(
@@ -97,7 +93,7 @@ Future<void> firebaseMessagingBackgroundHandler(RemoteMessage message) async {
           tag: "focus_button",
           width: 0,
           padding:
-          SystemWindowPadding(left: 10, right: 10, bottom: 10, top: 10),
+              SystemWindowPadding(left: 10, right: 10, bottom: 10, top: 10),
           height: SystemWindowButton.WRAP_CONTENT,
           decoration: SystemWindowDecoration(
               startColor: Colors.lightBlueAccent,
@@ -106,8 +102,7 @@ Future<void> firebaseMessagingBackgroundHandler(RemoteMessage message) async {
               borderRadius: 30.0),
         )
       ],
-      padding:
-      SystemWindowPadding(left: 16, right: 16, bottom: 12, top: 10),
+      padding: SystemWindowPadding(left: 16, right: 16, bottom: 12, top: 10),
       decoration: SystemWindowDecoration(startColor: Colors.white),
       buttonsPosition: ButtonPosition.CENTER);
   SystemAlertWindow.showSystemWindow(

@@ -126,6 +126,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.3"
+  flutter_overlay_window:
+    dependency: "direct main"
+    description:
+      name: flutter_overlay_window
+      sha256: "5bab855f641b4fca176c9002cd351b53cce518102721e4aec60eda3c74054360"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.4.3"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -176,6 +184,34 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.9.1"
+  my_flutter_plugin:
+    dependency: "direct main"
+    description:
+      path: "my_flutter_plugin/my_flutter_plugin"
+      relative: true
+    source: path
+    version: "0.1.0+1"
+  my_flutter_plugin_android:
+    dependency: transitive
+    description:
+      path: "my_flutter_plugin/my_flutter_plugin_android"
+      relative: true
+    source: path
+    version: "0.1.0+1"
+  my_flutter_plugin_ios:
+    dependency: transitive
+    description:
+      path: "my_flutter_plugin/my_flutter_plugin_ios"
+      relative: true
+    source: path
+    version: "0.1.0+1"
+  my_flutter_plugin_platform_interface:
+    dependency: transitive
+    description:
+      path: "my_flutter_plugin/my_flutter_plugin_platform_interface"
+      relative: true
+    source: path
+    version: "0.1.0+1"
   path:
     dependency: transitive
     description:
